@@ -33,7 +33,6 @@ namespace LAB3
             string wiek = textBoxWiek.Text;
             string stanowisko = comboBoxStanowisko.SelectedItem.ToString();
 
-
             glowneOkno.dodajPracownika(imie, nazwisko, wiek, stanowisko);
 
             this.Close();

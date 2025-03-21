@@ -33,6 +33,7 @@
             btnZapis = new Button();
             btnOdczyt = new Button();
             dataGridView = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
             Imie = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
@@ -42,7 +43,7 @@
             // 
             // btnDodaj
             // 
-            btnDodaj.Location = new Point(834, 30);
+            btnDodaj.Location = new Point(718, 23);
             btnDodaj.Name = "btnDodaj";
             btnDodaj.Size = new Size(94, 29);
             btnDodaj.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             // btnUsun
             // 
-            btnUsun.Location = new Point(834, 97);
+            btnUsun.Location = new Point(718, 75);
             btnUsun.Name = "btnUsun";
             btnUsun.Size = new Size(94, 29);
             btnUsun.TabIndex = 1;
@@ -62,32 +63,42 @@
             // 
             // btnZapis
             // 
-            btnZapis.Location = new Point(12, 386);
+            btnZapis.Location = new Point(12, 332);
             btnZapis.Name = "btnZapis";
             btnZapis.Size = new Size(169, 29);
             btnZapis.TabIndex = 2;
             btnZapis.Text = "Zapis do .csv";
             btnZapis.UseVisualStyleBackColor = true;
+            btnZapis.Click += btnZapis_Click;
             // 
             // btnOdczyt
             // 
-            btnOdczyt.Location = new Point(643, 386);
+            btnOdczyt.Location = new Point(521, 332);
             btnOdczyt.Name = "btnOdczyt";
             btnOdczyt.Size = new Size(169, 29);
             btnOdczyt.TabIndex = 3;
             btnOdczyt.Text = "Odczyt z .csv";
             btnOdczyt.UseVisualStyleBackColor = true;
+            btnOdczyt.Click += btnOdczyt_Click;
             // 
             // dataGridView
             // 
+            dataGridView.AllowUserToAddRows = false;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Columns.AddRange(new DataGridViewColumn[] { Imie, Column3, Column4, Column5 });
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Imie, Column3, Column4, Column5 });
             dataGridView.Location = new Point(12, 12);
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(800, 326);
+            dataGridView.Size = new Size(678, 286);
             dataGridView.TabIndex = 4;
             dataGridView.CellContentClick += dataGridView_CellContentClick;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "ID";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Width = 125;
             // 
             // Imie
             // 
@@ -121,7 +132,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(940, 432);
+            ClientSize = new Size(823, 373);
             Controls.Add(dataGridView);
             Controls.Add(btnOdczyt);
             Controls.Add(btnZapis);
@@ -142,6 +153,7 @@
         private Button btnZapis;
         private Button btnOdczyt;
         private DataGridView dataGridView;
+        private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Imie;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;

@@ -142,6 +142,7 @@
             Controls.Add(textBoxNazwisko);
             Controls.Add(textBoxImie);
             Name = "Pracownik";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pracownik";
             ResumeLayout(false);
             PerformLayout();
